@@ -22,7 +22,7 @@ latin_lang = [
         'af', 'az', 'bs', 'cs', 'cy', 'da', 'de', 'es', 'et', 'fr', 'ga', 'hr',  # noqa: E126
         'hu', 'id', 'is', 'it', 'ku', 'la', 'lt', 'lv', 'mi', 'ms', 'mt', 'nl',
         'no', 'oc', 'pi', 'pl', 'pt', 'ro', 'rs_latin', 'sk', 'sl', 'sq', 'sv',
-        'sw', 'tl', 'tr', 'uz', 'vi', 'french', 'german'
+        'sw', 'tl', 'tr', 'uz', 'french', 'german'
 ]
 arabic_lang = ['ar', 'fa', 'ug', 'ur']
 cyrillic_lang = [
@@ -64,6 +64,8 @@ class PytorchPaddleOCR(TextSystem):
 
         if self.lang in latin_lang:
             self.lang = 'latin'
+        elif self.lang == 'vi':
+            self.lang = 'vietnamese'
         elif self.lang in arabic_lang:
             self.lang = 'arabic'
         elif self.lang in cyrillic_lang:
