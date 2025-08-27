@@ -51,3 +51,8 @@ _build/
 
 
 output/
+
+# Python build artifacts
+*.egg-info/
+build/
+dist/
